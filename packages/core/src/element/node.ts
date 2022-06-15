@@ -56,7 +56,7 @@ const singleNode: ShapeOptions = {
       return { x: 0, y: 0, text: cfg!.label as string, textBaseline: 'middle', textAlign: 'center' };
     }
 
-    let { offset } = labelCfg;
+    let { offset = 0 } = labelCfg;
     if (isNil(offset)) {
       // 考虑 offset = 0 的场景，不用用 labelCfg.offset || Global.nodeLabel.offset
       offset = this.offset as number; // 不居中时的偏移量
@@ -232,7 +232,6 @@ const singleNode: ShapeOptions = {
     }
 
     if (markTop) {
-      console.log('top', top)
       if (!top && top !== undefined) {
         group.removeChild(markTop, true);
         delete group['shapeMap']['link-point-top'];

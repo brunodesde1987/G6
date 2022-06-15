@@ -108,13 +108,11 @@ describe('text background label', () => {
     },
   });
   it('text background label', done => {
-    debugger
+
     const mat = [1, 0, 0, 0, 1, 0, 0, 0, 1];
     console.log('test', transform(mat, [['r', Math.PI / 4], ['t', 100, 100]]))
     graph.data(data);
     graph.render();
-    console.log(graph.getEdges()[0].getContainer().children[2].getMatrix())
-    console.log(graph.getEdges()[0].getContainer().children[2].attr())
     // const edge1bg = graph.getEdges()[1].getContainer().find(ele => ele.get('classname') === 'edge-label-bg');
     // let edge1bgMatrix = edge1bg.getMatrix();
     // expect(edge1bgMatrix[0]).toBe(0.7071067811865476);
