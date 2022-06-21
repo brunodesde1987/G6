@@ -146,6 +146,7 @@ const singleCombo: ShapeOptions = {
     const keyShape = item.get('keyShape');
     const animate = cfg.animate === undefined ? this.options.animate : cfg.animate;
     const filteredAttrs = filterByAnimateAttrs(keyShapeStyle);
+    keyShape.stopAnimate();
     if (animate && keyShape.animate) {
       keyShape.animate(filteredAttrs, {
         duration: 200,
